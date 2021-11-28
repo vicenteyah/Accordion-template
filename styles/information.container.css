@@ -1,0 +1,22 @@
+.information-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--fontRegular);
+}
+
+.information-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 35px;
+    color: #585858;
+}
+.information-container h1{
+    font-family: var(--fontBold);
+}
+
+.information-content a{
+    color: var(--color-primary);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/Section.progress.css">
+    <link rel="stylesheet" href="styles/Section.hero.css">
+    <link rel="stylesheet" href="styles/information.container.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" 
+    crossorigin="anonymous">
+    <title>Vue app</title>
+</head>
+<body>
+    <div id="root">
+        <section class="section-hero">
+
+            <div class="information-container">
+                <h1>{{ props.mainTitle }}</h1>
+                <div v-for="(child ,index) in children" class="information-content">
+                    <a href="#"><i class="fas fa-plus-square"></i></a>
+                    <p>{{ child.description }}</p>
+                </div>
+            </div>
+
+            <div class="progress-bar-container">
+                <h1>{{ props.secondTitle }}</h1>
+                <div v-for="(item,index) in skills" class="progress-header">
+                    <div class="title-layout">
+                        <p>{{ item.title }}</p>
+                        <span class=" progresive-value">
+                            {{ item.value }}%
+                        </span>
+                    </div>
+                    <div class="progress-bar-linear-wrap">
+                        <div class="progress-bar-linear" :style="{width: item.width}">
+                            <div class="status-height" :style="{background: item.color}" ></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <footer class="footer-hero"></footer>
+    </div>
+</body>
+    <script src="javascript/app.js"></script>
+</html>
