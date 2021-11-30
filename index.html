@@ -22,8 +22,13 @@
             <div class="information-container">
                 <h1>{{ props.mainTitle }}</h1>
                 <div v-for="(child ,index) in children" class="information-content">
-                    <a href="#"><i class="fas fa-plus-square"></i></a>
-                    <p>{{ child.description }}</p>
+                    <div class="show accordion-provider">
+                        <a class="accordion"><i class="fas fa-plus-square"></i></a>
+                        <p>{{ child.description }}</p>
+                    </div>
+                    <div class="panel paragraph-container">
+                        <p>{{ child.paragraph }}</p>
+                    </div>
                 </div>
             </div>
 

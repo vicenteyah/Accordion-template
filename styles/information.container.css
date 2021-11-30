@@ -1,4 +1,10 @@
-.information-content {
+.information-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.accordion-provider {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -6,6 +12,9 @@
     font-family: var(--fontRegular);
 }
 
+.paragraph-container{
+    padding: 10px 20px;
+}
 .information-container{
     display: flex;
     flex-direction: column;
@@ -14,9 +23,21 @@
     color: #585858;
 }
 .information-container h1{
-    font-family: var(--fontBold);
+    font-family: var(--fontRegular);
 }
 
 .information-content a{
     color: var(--color-primary);
+}
+
+.active, .accordion:hover {
+    background-color: #ccc; 
+    transition: all 0.5s;
+}
+  
+
+.panel{
+    display: none;
+    background-color: #fff;
+    overflow: hidden;
 }
